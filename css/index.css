@@ -4,3 +4,9 @@
 .container {
     max-width: 730px;
 }
+
+/* Make content thinner */
+@media (min-width: 1200px)
+.container {
+    max-width: 900px;
+}
