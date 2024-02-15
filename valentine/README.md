@@ -10,3 +10,5 @@ Currently, two official plugins are available:
 Followed the following to deploy to GitHub Pages:
 https://github.com/gitname/react-gh-pages
 (but use `dist` folder for deploy property in `package.json`)
+
+Then execute `npm run deploy` to deploy website to steventhon.github.io
