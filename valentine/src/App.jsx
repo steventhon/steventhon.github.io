@@ -5,7 +5,7 @@ const phrases = [
   "No",
   "Are you sure?",
   "Really sure?",
-  "Pookie please",
+  "Pleaseeee",
   ">:(",
   "Don't do this to me...",
   "I'm getting sad...",
@@ -34,18 +34,29 @@ function App() {
         <>
         <img
         class="h-[200px]"
-        alt="bears kissing"
-        src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif"></img>
+        alt="hamsters kissing"
+        src="https://media1.tenor.com/m/xBc5aL-1d88AAAAd/hamster-kiss.gif"></img>
+          
+        <img
+        class="h-[200px]"
+        alt="hamster eating cheese"
+        src="ttps://64.media.tumblr.com/94b15d764d1e6ceb8a06f7fdc89a4874/tumblr_nx3n7j9D1l1rluhlpo1_400.gif"></img>
         <div class="text-4xl font-bold my-4 text-center">Ok yay!!!</div>
         <button onClick={() => window.location.reload(false)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back</button>
         </>
       ) : (
         <>
+          count == 0 ? (
         <img
         class="h-[200px]"
-        alt="bear with hearts"
-        src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"></img>
-        <h1 class="text-4xl my-4 text-center">Will you be my Valentine?</h1>
+        alt="shy hamster"
+        src="https://blog.omlet.us/wp-content/uploads/sites/6/2024/07/Hamster-sat-down-eating-950x629.jpg"></img>)
+          :
+        (<img
+        class="h-[200px]"
+        alt="awkward hamster"
+        src="https://media1.tenor.com/m/yKjcNbCzNUoAAAAd/yessir-4t.gif"></img>)
+        <h1 class="text-4xl my-4 text-center">Will you be the cheese to my ham?</h1>
         <div>
           <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
           style={{ fontSize: yesButtonSize }}
