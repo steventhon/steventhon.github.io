@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import sophiaImage from './assets/sophia.png';
 
 const phrases = [
   "No",
