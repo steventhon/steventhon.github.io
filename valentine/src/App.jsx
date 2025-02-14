@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import sophiaImage from './assets/sophia.png';
 
 const phrases = [
   "No",
@@ -47,7 +48,7 @@ function App() {
           <img
             class="h-[100px] absolute bottom-0 left-50"
             alt="sophia"
-            src="./assets/sophia.png"
+            src={sophiaImage}
           />
         </div>
 
