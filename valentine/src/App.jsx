@@ -47,7 +47,7 @@ function App() {
           <img
             class="h-[100px] absolute bottom-0 left-50"
             alt="sophia"
-            src="../assets/sophia.png"
+            src="./assets/sophia.png"
           />
         </div>
 
