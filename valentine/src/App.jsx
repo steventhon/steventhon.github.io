@@ -38,17 +38,26 @@ function App() {
         alt="hamsters kissing"
         src="https://media1.tenor.com/m/xBc5aL-1d88AAAAd/hamster-kiss.gif"></img>
         
-        <div class="relative">
+        <div style={{position:"relative"}}>
           <img
-          class="h-[200px] absolute top-0 left-0"
+          class="h-[200px]"
           alt="hamster eating cheese"
           src="https://64.media.tumblr.com/94b15d764d1e6ceb8a06f7fdc89a4874/tumblr_nx3n7j9D1l1rluhlpo1_400.gif"
+          style={{
+            position: 'absolute'
+          }}
           />
           
           <img
-            class="h-[100px] absolute bottom-0 left-50"
+            class="h-[50px] absolute bottom-0 left-50"
             alt="sophia"
             src={sophiaImage}
+          style={{
+            position: 'absolute',
+            bottom: '0',
+            left: '50%',
+            transform: 'translateX(-50%)',
+          }}
           />
         </div>
 
