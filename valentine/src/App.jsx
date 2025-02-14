@@ -6,19 +6,22 @@ const phrases = [
   "Are you sure?",
   "Really sure?",
   "Pleaseeee",
+  "Hunnooooo",
+  "Heyyyy",
   ">:(",
   "Don't do this to me...",
   "I'm getting sad...",
   "I'm gonna cry...",
   "You're breaking my heart :(",
-  "WHYYYYY",
-  "STAHPPP",
+  "D:",
+  "Noooooo",
+  "Whyyyy",
 ]
 
 function App() {
   const [count, setCount] = useState(0)
   const [yesPressed, setYesPressed] = useState(false)
-  const yesButtonSize = count * 40 + 16
+  const yesButtonSize = count * 50 + 16
 
   function handleNoClick() {
     setCount(count + 1)
