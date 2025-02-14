@@ -36,11 +36,21 @@ function App() {
         class="h-[200px]"
         alt="hamsters kissing"
         src="https://media1.tenor.com/m/xBc5aL-1d88AAAAd/hamster-kiss.gif"></img>
+        
+        <div class="relative">
+          <img
+          class="h-[200px] absolute top-0 left-0"
+          alt="hamster eating cheese"
+          src="https://64.media.tumblr.com/94b15d764d1e6ceb8a06f7fdc89a4874/tumblr_nx3n7j9D1l1rluhlpo1_400.gif"
+          />
           
-        <img
-        class="h-[200px]"
-        alt="hamster eating cheese"
-        src="https://64.media.tumblr.com/94b15d764d1e6ceb8a06f7fdc89a4874/tumblr_nx3n7j9D1l1rluhlpo1_400.gif"></img>
+          <img
+            class="h-[100px] absolute bottom-0 left-50"
+            alt="sophia"
+            src="../assets/sophia.png"
+          />
+        </div>
+
         <div class="text-4xl font-bold my-4 text-center">Ok yay!!!</div>
         <button onClick={() => window.location.reload(false)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back</button>
         </>
