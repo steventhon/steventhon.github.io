@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.valentine-container {
+  @apply flex flex-col items-center justify-center min-h-screen space-y-6 p-8 bg-pink-100;
+}
