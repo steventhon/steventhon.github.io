@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './App.css'
 
 // Simple router component
 const Router = ({ children }) => {
@@ -191,7 +190,7 @@ const Valentine = ({ navigate }) => {
             />
           </div>
 
-          <div className="text-4xl font-bold my-4 text-center">Ok yay!!!</div>
+          <div className="text-4xl font-bold my-4 text-center">Ok yay!!!!</div>
           <div className="space-x-4">
             <button 
               onClick={() => window.location.reload(false)} 

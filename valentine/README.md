@@ -19,8 +19,10 @@ Open http://localhost:5173/
 
 ## Deploying to GitHub Pages
 
-Followed the following to deploy to GitHub Pages:
-https://github.com/gitname/react-gh-pages
-(but use `dist` folder for deploy property in `package.json`)
+To deploy website to steventhon.github.io (takes a few minutes):
 
-Then execute `npm run deploy` to deploy website to steventhon.github.io
+```sh
+npm run deploy
+```
+
+More details here: https://github.com/gitname/react-gh-pages
