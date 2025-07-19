@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 
-// Simple router component
+// Simple hash router component (works better with GitHub Pages)
 const Router = ({ children }) => {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname)
+  const [currentPath, setCurrentPath] = useState(window.location.hash.slice(1) || '/')
   
   React.useEffect(() => {
-    const handlePopState = () => setCurrentPath(window.location.pathname)
-    window.addEventListener('popstate', handlePopState)
-    return () => window.removeEventListener('popstate', handlePopState)
+    const handleHashChange = () => setCurrentPath(window.location.hash.slice(1) || '/')
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
   
   const navigate = (path) => {
-    window.history.pushState({}, '', path)
+    window.location.hash = path
     setCurrentPath(path)
   }
   
