@@ -26,3 +26,8 @@ npm run deploy
 ```
 
 More details here: https://github.com/gitname/react-gh-pages
+
+## Available sites
+
+https://steventhon.github.io/#/
+https://steventhon.github.io/#/tip
