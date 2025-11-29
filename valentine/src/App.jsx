@@ -1,6 +1,7 @@
 import { Router, Route } from './components/Router'
 import Valentine from './screens/Valentine'
 import TipScreen from './screens/TipScreen'
+import Thanksgiving from './screens/Thanksgiving'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Router>
         <Route path="/" component={Valentine} />
         <Route path="/tip" component={TipScreen} />
+        <Route path="/thanksgiving" component={Thanksgiving} />
       </Router>
     </div>
   )
