@@ -2,6 +2,7 @@ import { Router, Route } from './components/Router'
 import Valentine from './screens/Valentine'
 import TipScreen from './screens/TipScreen'
 import Thanksgiving from './screens/Thanksgiving'
+import ScavengerHunt from './screens/ScavengerHunt'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" component={Valentine} />
         <Route path="/tip" component={TipScreen} />
         <Route path="/thanksgiving" component={Thanksgiving} />
+        <Route path="/scavenger" component={ScavengerHunt} />
       </Router>
     </div>
   )
