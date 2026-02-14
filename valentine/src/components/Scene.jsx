@@ -249,7 +249,7 @@ const Scene = ({ backgroundImage, clues, foundClues, onHotspotClick }) => {
               Please add your background image to:
             </p>
             <code className="block bg-gray-100 p-3 rounded text-sm text-left overflow-x-auto">
-              /valentine/public/assets/scavenger/background.jpg
+              /valentine/src/assets/scavenger/background.png
             </code>
             <p className="text-sm text-gray-500 mt-4">
               The game will start once the image is loaded.

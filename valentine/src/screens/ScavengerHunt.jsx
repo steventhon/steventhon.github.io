@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Scene from '../components/Scene';
 import Modal from '../components/Modal';
 import ProgressBar from '../components/ProgressBar';
 import VictoryScreen from '../components/VictoryScreen';
 import { clues as initialClues, victoryMessage } from '../data/clues';
+import backgroundImage from '../assets/scavenger/background.png';
 
 /**
  * ScavengerHunt - Main Game Container
@@ -15,20 +16,10 @@ const ScavengerHunt = () => {
   const [selectedClue, setSelectedClue] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showVictory, setShowVictory] = useState(false);
+  const [shouldShowVictoryOnClose, setShouldShowVictoryOnClose] = useState(false);
 
   // Background image path (update this to your actual image)
-  const BACKGROUND_IMAGE = '/src/assets/scavenger/background.png';
-
-  // Check if game is complete
-  useEffect(() => {
-    if (foundClues.size === initialClues.length && initialClues.length > 0) {
-      // Small delay before showing victory screen for better UX
-      const timer = setTimeout(() => {
-        setShowVictory(true);
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-  }, [foundClues]);
+  const BACKGROUND_IMAGE = backgroundImage;
 
   /**
    * Handle hotspot click
@@ -40,7 +31,16 @@ const ScavengerHunt = () => {
     }
 
     // Mark as found
-    setFoundClues((prev) => new Set([...prev, clue.id]));
+    setFoundClues((prev) => {
+      const newFoundClues = new Set([...prev, clue.id]);
+
+      // Check if this is the last clue
+      if (newFoundClues.size === initialClues.length) {
+        setShouldShowVictoryOnClose(true);
+      }
+
+      return newFoundClues;
+    });
 
     // Show modal with clue content
     setSelectedClue(clue);
@@ -54,6 +54,15 @@ const ScavengerHunt = () => {
     setIsModalOpen(false);
     // Clear selected clue after animation
     setTimeout(() => setSelectedClue(null), 300);
+
+    // Show victory screen if this was the last clue
+    if (shouldShowVictoryOnClose) {
+      // Small delay before showing victory screen for better UX
+      setTimeout(() => {
+        setShowVictory(true);
+        setShouldShowVictoryOnClose(false);
+      }, 500);
+    }
   };
 
   /**
@@ -64,6 +73,7 @@ const ScavengerHunt = () => {
     setSelectedClue(null);
     setIsModalOpen(false);
     setShowVictory(false);
+    setShouldShowVictoryOnClose(false);
   };
 
   return (
